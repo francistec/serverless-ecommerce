@@ -1,0 +1,19 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "currency-formatter": "^1.5.5",
+    "string": "^3.3.3"
+  },
+  "scripts": {
+    "pretest": "yarn install",
+    "test": "./node_modules/.bin/serverless offline",
+    "deploy": "./node_modules/.bin/serverless deploy --aws-profile leandrotec"
+  },
+  "devDependencies": {
+    "serverless": "^1.52.2",
+    "serverless-offline": "^5.11.0"
+  }
+}
