@@ -1,10 +1,10 @@
 'use strict';
-const S = require('string');
+const utils = require('./utils');
 const currency = require('currency-formatter');
 module.exports.handler = async event => {
   const products = [];
   for(let t=0; t<20; t++){
-    let id = S((t+1)+'').padLeft(5,'0').s; 
+    let id = utils.padLeft((t+1)+'', 5, '0'); 
     let price = randomInt(10000,40000);
     products.push({
       Id: id,
