@@ -12,6 +12,7 @@
     "deploy": "./node_modules/.bin/serverless deploy --aws-profile leandrotec"
   },
   "devDependencies": {
+    "aws-sdk": "^2.540.0",
     "serverless": "^1.52.2",
     "serverless-offline": "^5.11.0"
   }

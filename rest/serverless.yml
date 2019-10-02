@@ -60,6 +60,12 @@ plugins:
 #    - exclude-me-dir/**
 
 functions:
+  getStates:
+    handler: getStates.handler
+    events:
+      - http:
+          path: states
+          method: get
   getProducts:
     handler: getProduct.handler
     events:
