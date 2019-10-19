@@ -1,9 +1,12 @@
 'use strict';
 const utils = require('./utils');
 const currency = require('currency-formatter');
+
 module.exports.handler = async event => {
   const products = [];
-  for(let t=0; t<20; t++){
+  
+  const limit = (event.queryStringParameters && event.queryStringParameters.limit) ? event.queryStringParameters.limit : 20;
+  for(let t=0; t<limit; t++){
     let id = utils.padLeft((t+1)+'', 5, '0'); 
     let price = randomInt(10000,40000);
     products.push({

@@ -9,7 +9,7 @@
   "scripts": {
     "pretest": "yarn install",
     "test": "./node_modules/.bin/serverless offline",
-    "deploy": "./node_modules/.bin/serverless deploy --aws-profile leandrotec"
+    "deploy": "./node_modules/.bin/serverless deploy"
   },
   "devDependencies": {
     "aws-sdk": "^2.540.0",

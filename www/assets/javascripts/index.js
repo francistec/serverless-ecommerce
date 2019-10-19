@@ -9,7 +9,6 @@ $(document).ready(function(){
         store = data;
         $.each(data, function(index, item){
             $('.product-list').append(template(item))
-           
         });
     });
 
@@ -25,6 +24,7 @@ $(document).ready(function(){
 
     $('.cart-button').click(function(){
         saveCarToLocalStorage();
+        window.location = 'checkout.html';
     });
 
 });

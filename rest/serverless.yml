@@ -64,7 +64,7 @@ functions:
     handler: getStates.handler
     events:
       - http:
-          path: states
+          path: states/{country}
           method: get
   getProducts:
     handler: getProduct.handler
