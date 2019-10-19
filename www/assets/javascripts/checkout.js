@@ -2,6 +2,7 @@ var totalProducts = 0;
 
 var srcProduct = $("#resume-item").html();
 var template = Handlebars.compile(srcProduct);
+var price = 0;
 
 var checkout = {
     loadProducts: function (){
@@ -12,13 +13,25 @@ var checkout = {
         $('.pill-badge-notification').text(totalProducts);
 
         $.each(products, (index, item)=>{
-            console.log(item);
+            price += parseFloat(item.Price.clean);
             $('.products-sidebar').append(template(item));
         })
         
 
     }
 };
+
+function validateData(){
+    //firstName
+    //lastName
+    //email
+    //address
+    //address2
+    //country
+    //state
+    //zip
+
+}
 
 checkout.loadProducts();
 console.log("en el checkout");

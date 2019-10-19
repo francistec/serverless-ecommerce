@@ -72,6 +72,16 @@ functions:
       - http:
           path: products
           method: get
+  applyPayment:
+    handler: applyPayment.handler
+    events:
+      - http:
+          path: /payment
+          method: post
+  sendSMS:
+    handler: sendSMS.handler
+  sendEmail:
+    handler: sendEmail.handler
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
